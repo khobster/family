@@ -5,159 +5,159 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>The Vairetti Family Tree</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400&display=swap');
 
-  * { margin: 0; padding: 0; box-sizing: border-box; }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
 
-  body {
-    background: #FAFAF7;
-    color: #1a1a1a;
-    font-family: 'Courier Prime', 'Courier New', monospace;
-    padding: 48px 32px 64px;
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 13px;
-    line-height: 1.5;
-  }
+  body {
+    background: #FAFAF7;
+    color: #1a1a1a;
+    font-family: 'Courier Prime', 'Courier New', monospace;
+    padding: 48px 32px 64px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 13px;
+    line-height: 1.5;
+  }
 
-  h1 {
-    text-align: center;
-    font-size: 22px;
-    letter-spacing: 5px;
-    margin-bottom: 4px;
-    font-weight: 700;
-    text-transform: uppercase;
-    color: #111;
-  }
+  h1 {
+    text-align: center;
+    font-size: 22px;
+    letter-spacing: 5px;
+    margin-bottom: 4px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #111;
+  }
 
-  .subtitle {
-    text-align: center;
-    font-style: italic;
-    font-size: 12px;
-    margin-bottom: 10px;
-    color: #666;
-  }
+  .subtitle {
+    text-align: center;
+    font-style: italic;
+    font-size: 12px;
+    margin-bottom: 10px;
+    color: #666;
+  }
 
-  .legend {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-bottom: 36px;
-    font-size: 11px;
-    flex-wrap: wrap;
-  }
+  .legend {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 36px;
+    font-size: 11px;
+    flex-wrap: wrap;
+  }
 
-  .legend-item {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    color: #555;
-  }
+  .legend-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    color: #555;
+  }
 
-  .legend-swatch {
-    width: 14px;
-    height: 14px;
-    border-radius: 2px;
-    flex-shrink: 0;
-  }
+  .legend-swatch {
+    width: 14px;
+    height: 14px;
+    border-radius: 2px;
+    flex-shrink: 0;
+  }
 
-  .section {
-    margin-bottom: 32px;
-    padding: 20px 20px 20px 24px;
-    border-left: 4px solid #ccc;
-    background: #fff;
-    border-radius: 0 4px 4px 0;
-  }
+  .section {
+    margin-bottom: 32px;
+    padding: 20px 20px 20px 24px;
+    border-left: 4px solid #ccc;
+    background: #fff;
+    border-radius: 0 4px 4px 0;
+  }
 
-  .section.vairetti { border-left-color: #8B4513; }
-  .section.allera { border-left-color: #5C7A3A; }
-  .section.welzel { border-left-color: #3D6B8E; }
-  .section.combined { border-left-color: #B8860B; }
-  .section.unplaced { border-left-color: #999; }
+  .section.vairetti { border-left-color: #8B4513; }
+  .section.allera { border-left-color: #5C7A3A; }
+  .section.welzel { border-left-color: #3D6B8E; }
+  .section.combined { border-left-color: #B8860B; }
+  .section.unplaced { border-left-color: #999; }
 
-  .section-header {
-    font-weight: 700;
-    font-size: 14px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    margin-bottom: 2px;
-  }
+  .section-header {
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
 
-  .vairetti .section-header { color: #8B4513; }
-  .allera .section-header { color: #5C7A3A; }
-  .welzel .section-header { color: #3D6B8E; }
-  .combined .section-header { color: #B8860B; }
-  .unplaced .section-header { color: #777; }
+  .vairetti .section-header { color: #8B4513; }
+  .allera .section-header { color: #5C7A3A; }
+  .welzel .section-header { color: #3D6B8E; }
+  .combined .section-header { color: #B8860B; }
+  .unplaced .section-header { color: #777; }
 
-  .section-location {
-    font-style: italic;
-    font-size: 11.5px;
-    color: #777;
-    margin-bottom: 16px;
-  }
+  .section-location {
+    font-style: italic;
+    font-size: 11.5px;
+    color: #777;
+    margin-bottom: 16px;
+  }
 
-  .tree {
-    white-space: pre;
-    line-height: 1.45;
-    font-size: 12.5px;
-  }
+  .tree {
+    white-space: pre;
+    line-height: 1.45;
+    font-size: 12.5px;
+  }
 
-  .tree .name {
-    font-weight: 700;
-  }
+  .tree .name {
+    font-weight: 700;
+  }
 
-  .tree .note {
-    color: #666;
-    font-style: italic;
-  }
+  .tree .note {
+    color: #666;
+    font-style: italic;
+  }
 
-  .tree .flag {
-    font-size: 10px;
-    color: #999;
-  }
+  .tree .flag {
+    font-size: 10px;
+    color: #999;
+  }
 
-  .origins {
-    margin-top: 16px;
-    border-top: 1px solid #ddd;
-    padding-top: 20px;
-  }
+  .origins {
+    margin-top: 16px;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+  }
 
-  .origins h2 {
-    font-size: 13px;
-    letter-spacing: 2px;
-    margin-bottom: 16px;
-    text-align: center;
-    color: #444;
-  }
+  .origins h2 {
+    font-size: 13px;
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    text-align: center;
+    color: #444;
+  }
 
-  .origin-entry {
-    margin-bottom: 12px;
-    padding-left: 20px;
-  }
+  .origin-entry {
+    margin-bottom: 12px;
+    padding-left: 20px;
+  }
 
-  .origin-entry .label {
-    font-weight: 700;
-    font-size: 12px;
-  }
+  .origin-entry .label {
+    font-weight: 700;
+    font-size: 12px;
+  }
 
-  .origin-entry .place {
-    font-size: 12px;
-  }
+  .origin-entry .place {
+    font-size: 12px;
+  }
 
-  .origin-entry .desc {
-    font-size: 11px;
-    color: #666;
-    font-style: italic;
-  }
+  .origin-entry .desc {
+    font-size: 11px;
+    color: #666;
+    font-style: italic;
+  }
 
-  .origin-entry .swatch {
-    display: inline-block;
-    width: 10px;
-    height: 10px;
-    border-radius: 2px;
-    margin-right: 4px;
-    vertical-align: middle;
-  }
+  .origin-entry .swatch {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    border-radius: 2px;
+    margin-right: 4px;
+    vertical-align: middle;
+  }
 </style>
 </head>
 <body>
@@ -166,234 +166,234 @@
 <p class="subtitle">From Valtellina to America</p>
 
 <div class="legend">
-  <div class="legend-item"><div class="legend-swatch" style="background:#8B4513;"></div> Vairetti</div>
-  <div class="legend-item"><div class="legend-swatch" style="background:#5C7A3A;"></div> Allera</div>
-  <div class="legend-item"><div class="legend-swatch" style="background:#3D6B8E;"></div> Welzel &amp; Mader</div>
-  <div class="legend-item"><div class="legend-swatch" style="background:#B8860B;"></div> Combined Lines</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#8B4513;"></div> Vairetti</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#5C7A3A;"></div> Allera</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#3D6B8E;"></div> Welzel &amp; Mader</div>
+  <div class="legend-item"><div class="legend-swatch" style="background:#B8860B;"></div> Combined Lines</div>
 </div>
 
 <div class="section vairetti">
-  <div class="section-header">The Vairetti Line</div>
-  <div class="section-location">Ponte in Valtellina &amp; Caiolo, Sondrio, Lombardy, Italy</div>
+  <div class="section-header">The Vairetti Line</div>
+  <div class="section-location">Ponte in Valtellina &amp; Caiolo, Sondrio, Lombardy, Italy</div>
 
 <div class="tree"><span class="name">MICHELE VAJERETTI</span> (1778–1866)
-   │
-   └── Married: <span class="name">MARGHERITA MORESCHI</span>
-          │
-          └── <span class="name">MICHELE VAJERETTI / VAIRETTI</span> (1823–1908)
-                 Born in Ponte in Valtellina. Died 2 May 1908.
-                 <span class="note">Michele appears to have had children with three different women,</span>
-                 <span class="note">explaining the shift from Ponte to Caiolo.</span>
+   │
+   └── Married: <span class="name">MARGHERITA MORESCHI</span>
+          │
+          └── <span class="name">MICHELE VAJERETTI / VAIRETTI</span> (1823–1908)
+                 Born in Ponte in Valtellina. Died 2 May 1908.
+                 <span class="note">Michele appears to have had children with three different women,</span>
+                 <span class="note">explaining the shift from Ponte to Caiolo.</span>
 
-   <span class="flag">[Source: FamilySearch Pedigree Resource File, Pizzatti Patricia, Nov 2022]</span>
+   <span class="flag">[Source: FamilySearch Pedigree Resource File, Pizzatti Patricia, Nov 2022]</span>
 
 
 <span class="flag">WITH WIFE 1: CATTERINA MORESCHI (b. ~1820s)</span>
 
-   └── <span class="name">GIOVANNI VAIRETTI</span> (1851–1938)
-          <span class="note">Born in Ponte. Died in Ponte (Record #35).</span>
-          <span class="note">Father of Vittorio &amp; Luigi (who went to Philadelphia).</span>
-          <span class="note">As eldest brother, likely stood in as family patriarch</span>
-          <span class="note">after Giacomo's death — listed as father on Michael's</span>
-          <span class="note">1922 marriage record.</span>
+   └── <span class="name">GIOVANNI VAIRETTI</span> (1851–1938)
+          <span class="note">Born in Ponte. Died in Ponte (Record #35).</span>
+          <span class="note">Father of Vittorio &amp; Luigi (who went to Philadelphia).</span>
+          <span class="note">As eldest brother, likely stood in as family patriarch</span>
+          <span class="note">after Giacomo's death — listed as father on Michael's</span>
+          <span class="note">1922 marriage record.</span>
 
 
 <span class="flag">WITH WIFE 2: LUCIA VAIRETTI (b. ~1823)</span>
 
-   ├── <span class="name">ROCCO VAIRETTI</span> (1862–1938)
-   │      <span class="note">Born in Ponte. Died in Ponte (Record #11).</span>
-   │      └── Married: <span class="name">MARGHERITA MARCHESI</span> (b. 1860), m. 1887
-   │
-   ├── <span class="name">ABBONDIO VAIRETTI</span> (1864–1944)
-   │      <span class="note">Farmer in Ponte.</span>
-   │
-   └── <span class="name">LUCIA VAIRETTI</span> (b. 1867)
+   ├── <span class="name">ROCCO VAIRETTI</span> (1862–1938)
+   │      <span class="note">Born in Ponte. Died in Ponte (Record #11).</span>
+   │      └── Married: <span class="name">MARGHERITA MARCHESI</span> (b. 1860), m. 1887
+   │
+   ├── <span class="name">ABBONDIO VAIRETTI</span> (1864–1944)
+   │      <span class="note">Farmer in Ponte.</span>
+   │
+   └── <span class="name">LUCIA VAIRETTI</span> (b. 1867)
 
 
 <span class="flag">WITH WIFE 3: CATTERINA MARTINELLI (b. ~1840s)</span>
-   <span class="note">Family moved to neighboring village of Caiolo for this birth.</span>
+   <span class="note">Family moved to neighboring village of Caiolo for this birth.</span>
 
-   └── <span class="name">GIACOMO VAIRETTI / VAIRETTO PICCOLO</span> (1869–Pre-1922)
-          <span class="note">Born 27 Sep 1869, Caiolo, Sondrio.</span>
-          <span class="note">Originally recorded as "Vairetto Piccolo" (Little Vairetto branch).</span>
-          <span class="note">Married in Quassolo, then migrated to Vevey, Switzerland.</span>
-          <span class="note">Died before son Michael's 1922 marriage.</span>
-          │
-          └── Married 28 Apr 1894, Quassolo:
-             <span class="name">MARGHERITA ALLERA</span> (see Allera Line below)</div>
+   └── <span class="name">GIACOMO VAIRETTI / VAIRETTO PICCOLO</span> (1869–Pre-1922)
+          <span class="note">Born 27 Sep 1869, Caiolo, Sondrio.</span>
+          <span class="note">Originally recorded as "Vairetto Piccolo" (Little Vairetto branch).</span>
+          <span class="note">Married in Quassolo, then migrated to Vevey, Switzerland.</span>
+          <span class="note">Died before son Michael's 1922 marriage.</span>
+          │
+          └── Married 28 Apr 1894, Quassolo:
+             <span class="name">MARGHERITA ALLERA</span> (see Allera Line below)</div>
 </div>
 
 <div class="section allera">
-  <div class="section-header">The Allera Line</div>
-  <div class="section-location">Quassolo, Province of Turin, Piedmont, Italy</div>
+  <div class="section-header">The Allera Line</div>
+  <div class="section-location">Quassolo, Province of Turin, Piedmont, Italy</div>
 
 <div class="tree"><span class="name">GIOVANNI ALLERA</span> (b. ~1820s)
-   │  Residing in Quassolo as of 1894.
-   │
-   └── Married: <span class="name">ANTONIA BARASA</span> (b. ~1820s)
-          │
-          ├── <span class="name">APPOLONIA CATTERINA ALLERA</span> (b. ~1859)
-          │      <span class="note">Married 18 Oct 1886 to Pietro Giuseppe Morosso (Mason).</span>
-          │      <span class="note">Legitimized daughter Margherita Antonia Maria (b. 3 Oct 1886).</span>
-          │
-          └── <span class="name">MARGHERITA ALLERA</span> (b. 16 Jul 1865, Quassolo — d. 1947, Hoboken, NJ)
-                 <span class="note">Married Giacomo Vairetto Piccolo on 28 Apr 1894 in Quassolo.</span>
-                 <span class="note">Arrived New York 1924 as a widow.</span>
-                 <span class="note">Living with son Marcel &amp; daughter Madeleine in NJ by 1930.</span></div>
+   │  Residing in Quassolo as of 1894.
+   │
+   └── Married: <span class="name">ANTONIA BARASA</span> (b. ~1820s)
+          │
+          ├── <span class="name">APPOLONIA CATTERINA ALLERA</span> (b. ~1859)
+          │      <span class="note">Married 18 Oct 1886 to Pietro Giuseppe Morosso (Mason).</span>
+          │      <span class="note">Legitimized daughter Margherita Antonia Maria (b. 3 Oct 1886).</span>
+          │
+          └── <span class="name">MARGHERITA ALLERA</span> (b. 16 Jul 1865, Quassolo — d. 1947, Hoboken, NJ)
+                 <span class="note">Married Giacomo Vairetto Piccolo on 28 Apr 1894 in Quassolo.</span>
+                 <span class="note">Arrived New York 1924 as a widow.</span>
+                 <span class="note">Living with son Marcel &amp; daughter Madeleine in NJ by 1930.</span></div>
 </div>
 
 <div class="section welzel">
-  <div class="section-header">The Welzel &amp; Mader Line</div>
-  <div class="section-location">Rokitnitz &amp; Ober Rübner (Horní Rybník), Bohemia (Sudetenland)</div>
+  <div class="section-header">The Welzel &amp; Mader Line</div>
+  <div class="section-location">Rokitnitz &amp; Ober Rübner (Horní Rybník), Bohemia (Sudetenland)</div>
 
 <div class="tree"><span class="name">IGNATZ WELZEL</span> (d. Pre-1872)
-   │  <span class="note">Schuhmachermeister (Master Shoemaker) in Rokitnitz, House No. 120.</span>
-   └── Married: <span class="name">FRANZISKA HERRMANN</span>
-          │  <span class="note">Daughter of Kaspar Herrmann, a Bauer (Farmer) from Rokitnitz.</span>
-          │
-          ├── <span class="name">ANTON WELZEL</span> (b. 13 Jun 1810)
-          │      <span class="note">Born in House No. 120, Rokitnitz.</span>
-          │
-          └── <span class="name">JOHANN WELZEL</span> (b. 24 Apr 1812)
-                 <span class="note">Born in House No. 120, Rokitnitz.</span>
-                 <span class="note">Later an Inwohner in Ober Rübner, House No. 34.</span>
+   │  <span class="note">Schuhmachermeister (Master Shoemaker) in Rokitnitz, House No. 120.</span>
+   └── Married: <span class="name">FRANZISKA HERRMANN</span>
+          │  <span class="note">Daughter of Kaspar Herrmann, a Bauer (Farmer) from Rokitnitz.</span>
+          │
+          ├── <span class="name">ANTON WELZEL</span> (b. 13 Jun 1810)
+          │      <span class="note">Born in House No. 120, Rokitnitz.</span>
+          │
+          └── <span class="name">JOHANN WELZEL</span> (b. 24 Apr 1812)
+                 <span class="note">Born in House No. 120, Rokitnitz.</span>
+                 <span class="note">Later an Inwohner in Ober Rübner, House No. 34.</span>
 
 <span class="name">FRANZ MADER</span> (b. ~1840s)
-   │  <span class="note">Häusler (Cottager/Homeowner) in Ober Rübner.</span>
-   └── Married: <span class="name">MARIA ANNA PECHER</span> (from Nieder Rübner)
-          │
-          └── <span class="name">THERESIA MADER</span> (b. ~1840s)
+   │  <span class="note">Häusler (Cottager/Homeowner) in Ober Rübner.</span>
+   └── Married: <span class="name">MARIA ANNA PECHER</span> (from Nieder Rübner)
+          │
+          └── <span class="name">THERESIA MADER</span> (b. ~1840s)
 
 
 <span class="flag">THE UNION OF THE WELZEL &amp; MADER FAMILIES:</span>
 
 <span class="name">JOHANN WELZEL</span> married <span class="name">THERESIA MADER</span>
-   │
-   └── <span class="name">FRANZ WELZEL</span> (1872–1948)
-          <span class="note">Born 28 Nov 1872 in House No. 34, Ober Rübner.</span>
-          │
-          └── Married: <span class="name">IDA ROTTER</span> (1874–1957)
-                 │
-                 └── <span class="name">IDA WELZEL</span>
-                        <span class="note">Raised in her grandmother's family home (House No. 34)</span>
-                        <span class="note">alongside the extended Mader family.</span>
-                        <span class="note">(See Combined Lines below.)</span>
+   │
+   └── <span class="name">FRANZ WELZEL</span> (1872–1948)
+          <span class="note">Born 28 Nov 1872 in House No. 34, Ober Rübner.</span>
+          │
+          └── Married: <span class="name">IDA ROTTER</span> (1874–1957)
+                 │
+                 └── <span class="name">IDA WELZEL</span>
+                        <span class="note">Raised in her grandmother's family home (House No. 34)</span>
+                        <span class="note">alongside the extended Mader family.</span>
+                        <span class="note">(See Combined Lines below.)</span>
 
 
-   <span class="note">Connected — relationship not yet confirmed:</span>
+   <span class="note">Connected — relationship not yet confirmed:</span>
 
 <span class="name">JACOB SOLAR</span> (b. ~1880, Austria/Bohemia)
-   │  Listed as Ida Welzel's "Uncle" on her 1922 arrival record.
-   │  501 Summit Ave, West Hoboken, NJ. Arrived US ~1905–1906.
-   │  <span class="note">Same migration path as Ida: Bohemia → Switzerland → New Jersey.</span>
-   │
-   └── Married: <span class="name">MARY SOLAR</span> (b. ~1878, Austria)
-          <span class="note">If Mary's maiden name is Welzel, she is Franz's sister.</span>
-          <span class="note">If not, she may be Ida Rotter's sister.</span>
-          │
-          └── <span class="name">JACOB SOLAR JR.</span> (b. ~1903, Switzerland)</div>
+   │  Listed as Ida Welzel's "Uncle" on her 1922 arrival record.
+   │  501 Summit Ave, West Hoboken, NJ. Arrived US ~1905–1906.
+   │  <span class="note">Same migration path as Ida: Bohemia → Switzerland → New Jersey.</span>
+   │
+   └── Married: <span class="name">MARY SOLAR</span> (b. ~1878, Austria)
+          <span class="note">If Mary's maiden name is Welzel, she is Franz's sister.</span>
+          <span class="note">If not, she may be Ida Rotter's sister.</span>
+          │
+          └── <span class="name">JACOB SOLAR JR.</span> (b. ~1903, Switzerland)</div>
 </div>
 
 <div class="section combined">
-  <div class="section-header">Vevey to New Jersey</div>
-  <div class="section-location">Children of Giacomo Vairetti &amp; Margherita Allera — Born in Vevey, Switzerland</div>
+  <div class="section-header">Vevey to New Jersey</div>
+  <div class="section-location">Children of Giacomo Vairetti &amp; Margherita Allera — Born in Vevey, Switzerland</div>
 
 <div class="tree"><span class="name">MICHEL "MICHAEL" VAIRETTI / VAIRETTE</span> (1895–1974)
-   │  b. 1895, Vevey, Switzerland
-   │  Arrived US 1914 on S.S. La France
-   │  <span class="note">Naturalized 1922. Settled in West New York, NJ.</span>
-   │
-   └── Married 10 Oct 1922, Manhattan:
-      <span class="name">IDA WELZEL</span> (b. 2 Aug 1897, Ober Rübner, Bohemia — d. 1974)
-         <span class="note">Daughter of Franz Welzel &amp; Ida Rotter.</span>
-         <span class="note">Ethnic German born in the Sudetenland (Czechoslovakia).</span>
-         <span class="note">1921 Czechia Census: servant in household of Franz Mader,</span>
-         <span class="note">Him Rybnai, Rokitnitz district, Bohemia. Single.</span>
-         <span class="note">Moved to Höngg, Zurich, Switzerland between 1921–1922.</span>
-         <span class="note">Seamstress. Spoke French &amp; German.</span>
-         <span class="note">Arrived US late Sept 1922 on S.S. Saxonia from Cherbourg.</span>
-         <span class="note">Destination: friend Frida Lottenbach, 186 Claremont Ave, NY.</span>
-         <span class="note">Listed as divorced on marriage record — reason unknown.</span>
-         <span class="note">Claimed Swiss birth on US documents and throughout her life.</span>
-         <span class="note">Michael traveled to Switzerland to visit his mother —</span>
-         <span class="note">likely where he and Ida began their courtship.</span>
+   │  b. 1895, Vevey, Switzerland
+   │  Arrived US 1914 on S.S. La France
+   │  <span class="note">Naturalized 1922. Settled in West New York, NJ.</span>
+   │
+   └── Married 10 Oct 1922, Manhattan:
+      <span class="name">IDA WELZEL</span> (b. 2 Aug 1897, Ober Rübner, Bohemia — d. 1974)
+         <span class="note">Daughter of Franz Welzel &amp; Ida Rotter.</span>
+         <span class="note">Ethnic German born in the Sudetenland (Czechoslovakia).</span>
+         <span class="note">1921 Czechia Census: servant in household of Franz Mader,</span>
+         <span class="note">Him Rybnai, Rokitnitz district, Bohemia. Single.</span>
+         <span class="note">Moved to Höngg, Zurich, Switzerland between 1921–1922.</span>
+         <span class="note">Seamstress. Spoke French &amp; German.</span>
+         <span class="note">Arrived US late Sept 1922 on S.S. Saxonia from Cherbourg.</span>
+         <span class="note">Destination: friend Frida Lottenbach, 186 Claremont Ave, NY.</span>
+         <span class="note">Listed as divorced on marriage record — reason unknown.</span>
+         <span class="note">Claimed Swiss birth on US documents and throughout her life.</span>
+         <span class="note">Michael traveled to Switzerland to visit his mother —</span>
+         <span class="note">likely where he and Ida began their courtship.</span>
 
 
 <span class="name">MADELEINE MARIE VAIRETTE</span> (1900–1986)
-   │  b. 1900, Switzerland (likely Vevey)
-   │  d. 1986, Orange, California
-   │  <span class="note">Living with brother Marcel &amp; mother Margaret in NJ, 1930.</span>
-   │  <span class="note">Previously thought to be Marcel's wife — actually his sister.</span>
-   │
-   └── Married 1 Sep 1933, Manhattan:
-      <span class="name">ERNEST PAUL TERZO</span> (b. 1903, France)
+   │  b. 1900, Switzerland (likely Vevey)
+   │  d. 1986, Orange, California
+   │  <span class="note">Living with brother Marcel &amp; mother Margaret in NJ, 1930.</span>
+   │  <span class="note">Previously thought to be Marcel's wife — actually his sister.</span>
+   │
+   └── Married 1 Sep 1933, Manhattan:
+      <span class="name">ERNEST PAUL TERZO</span> (b. 1903, France)
 
 
 <span class="name">EDOUARD "MARCEL" VAIRETTI</span> (b. ~1907, Vevey — d. 1999)
-   │  Arrived US 1924 with mother Margaret
-   │  <span class="note">House painter, Guttenberg, NJ.</span>
-   │  <span class="note">1930 Census: Father's birthplace listed as ITALY (Sondrio).</span>
-   │
-   └── Married 1972:
-      <span class="name">JOSEPHINE COOLICK</span> (b. 1920, Hudson, PA — d. 1999)</div>
+   │  Arrived US 1924 with mother Margaret
+   │  <span class="note">House painter, Guttenberg, NJ.</span>
+   │  <span class="note">1930 Census: Father's birthplace listed as ITALY (Sondrio).</span>
+   │
+   └── Married 1972:
+      <span class="name">JOSEPHINE COOLICK</span> (b. 1920, Hudson, PA — d. 1999)</div>
 </div>
 
 <div class="section combined">
-  <div class="section-header">The First Americans</div>
-  <div class="section-location">Born in New Jersey — Children of Michael &amp; Ida</div>
+  <div class="section-header">The First Americans</div>
+  <div class="section-location">Born in New Jersey — Children of Michael &amp; Ida</div>
 
 <div class="tree"><span class="name">MARCEL VAIRETTE</span> (b. 1923)
-   │  <span class="note">Named after his uncle Edouard/Marcel.</span>
+   │  <span class="note">Named after his uncle Edouard/Marcel.</span>
 
 <span class="name">JACK VAIRETTE</span> (b. 1925)
-   │  <span class="note">Likely named after grandfather Giacomo/Jacques/Jack.</span>
+   │  <span class="note">Likely named after grandfather Giacomo/Jacques/Jack.</span>
 
 <span class="name">JOHN VAIRETTE</span> (b. 1926)
-      <span class="note">The youngest of the three boys.</span></div>
+      <span class="note">The youngest of the three boys.</span></div>
 </div>
 
 <div class="section unplaced">
-  <div class="section-header">Unplaced — Needs Research</div>
-  <div class="section-location">Possible relatives found in records</div>
+  <div class="section-header">Unplaced — Needs Research</div>
+  <div class="section-location">Possible relatives found in records</div>
 
 <div class="tree"><span class="name">JAMES E. VAIRETTI</span> (b. ~1890, Italy — d. ?)
-   │  1950 Census: Santa Barbara, California
-   │  <span class="note">"James" is a common Americanization of Giacomo.</span>
-   │  <span class="note">Could be another son of Michele (unlikely due to age) or Giovanni's line.</span>
-   │
-   └── Married: <span class="name">ANNA M.</span> (b. ~1892, Italy)
+   │  1950 Census: Santa Barbara, California
+   │  <span class="note">"James" is a common Americanization of Giacomo.</span>
+   │  <span class="note">Could be another son of Michele (unlikely due to age) or Giovanni's line.</span>
+   │
+   └── Married: <span class="name">ANNA M.</span> (b. ~1892, Italy)
 
 <span class="name">LUIGI VAJERETTI</span>
-      <span class="flag">[FamilySearch pedigree — in Michele's ancestry chart]</span>
-      └── Married: <span class="name">DOMENICA BRIOTTI</span></div>
+      <span class="flag">[FamilySearch pedigree — in Michele's ancestry chart]</span>
+      └── Married: <span class="name">DOMENICA BRIOTTI</span></div>
 </div>
 
 <div class="origins">
-  <h2>PLACES OF ORIGIN</h2>
+  <h2>PLACES OF ORIGIN</h2>
 
-  <div class="origin-entry">
-    <div class="label"><span class="swatch" style="background:#8B4513;"></span> Vairetti:</div>
-    <div class="place">Ponte in Valtellina &amp; Caiolo, Sondrio, Lombardy</div>
-    <div class="desc">Neighboring alpine villages. Name standardized to "Vairetti" by 1930s.</div>
-  </div>
+  <div class="origin-entry">
+    <div class="label"><span class="swatch" style="background:#8B4513;"></span> Vairetti:</div>
+    <div class="place">Ponte in Valtellina &amp; Caiolo, Sondrio, Lombardy</div>
+    <div class="desc">Neighboring alpine villages. Name standardized to "Vairetti" by 1930s.</div>
+  </div>
 
-  <div class="origin-entry">
-    <div class="label"><span class="swatch" style="background:#5C7A3A;"></span> Allera:</div>
-    <div class="place">Quassolo, Province of Turin, Piedmont</div>
-    <div class="desc">Canavese district. Parents: Giovanni Allera &amp; Antonia Barasa.</div>
-  </div>
+  <div class="origin-entry">
+    <div class="label"><span class="swatch" style="background:#5C7A3A;"></span> Allera:</div>
+    <div class="place">Quassolo, Province of Turin, Piedmont</div>
+    <div class="desc">Canavese district. Parents: Giovanni Allera &amp; Antonia Barasa.</div>
+  </div>
 
-  <div class="origin-entry">
-    <div class="label"><span class="swatch" style="background:#3D6B8E;"></span> Welzel / Mader:</div>
-    <div class="place">Rokitnitz &amp; Ober Rübner (Horní Rybník), Bohemia (Sudetenland)</div>
-    <div class="desc">Ethnic German Catholic families from the Eagle Mountains.</div>
-  </div>
+  <div class="origin-entry">
+    <div class="label"><span class="swatch" style="background:#3D6B8E;"></span> Welzel / Mader:</div>
+    <div class="place">Rokitnitz &amp; Ober Rübner (Horní Rybník), Bohemia (Sudetenland)</div>
+    <div class="desc">Ethnic German Catholic families from the Eagle Mountains.</div>
+  </div>
 
-  <div class="origin-entry">
-    <div class="label"><span class="swatch" style="background:#B8860B;"></span> Migration Path:</div>
-    <div class="place">Quassolo → Vevey (Switzerland) → New Jersey</div>
-    <div class="desc">Giacomo &amp; Margherita married in Quassolo (1894), then moved to Vevey.</div>
-  </div>
+  <div class="origin-entry">
+    <div class="label"><span class="swatch" style="background:#B8860B;"></span> Migration Path:</div>
+    <div class="place">Quassolo → Vevey (Switzerland) → New Jersey</div>
+    <div class="desc">Giacomo &amp; Margherita married in Quassolo (1894), then moved to Vevey.</div>
+  </div>
 </div>
 
 </body>
